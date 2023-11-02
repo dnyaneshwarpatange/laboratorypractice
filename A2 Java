@@ -1,0 +1,37 @@
+VB PROGRAM
+Public Class Form1
+Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As 
+System.EventArgs) Handles Button1.Click
+TextBox3.Text = adddll.mul(Val(TextBox1.Text), Val(TextBox2.Text))
+End Sub
+Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As 
+System.EventArgs) Handles Button2.Click
+TextBox3.Text = adddll.substraction(Val(TextBox1.Text), 
+Val(TextBox2.Text)) End Sub
+Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) 
+Handles Button3.Click
+TextBox3.Text = adddll.add(Val(TextBox1.Text), Val(TextBox2.Text))
+End Sub
+Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As 
+System.EventArgs) Handles Button4.Click
+TextBox3.Text = adddll.div(Val(TextBox1.Text), Val(TextBox2.Text))
+End Sub
+End Class
+
+
+
+1.3 DLL PROGRAM
+Public Module addm
+Public Function add(ByVal n1 As Integer, ByVal n2 As Integer)
+Return (n1 + n2)
+End Function
+Public Function substraction(ByVal n1 As Integer, ByVal n2 As Integer)
+Return (n1 - n2)
+End Function
+Public Function mul(ByVal n1 As Integer, ByVal n2 As Integer)
+Return (n1 * n2)
+End Function
+Public Function div(ByVal n1 As Integer, ByVal n2 As Integer)
+Return (n1 / n2)
+End Function
+End Module
